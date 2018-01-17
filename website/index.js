@@ -1,48 +1,21 @@
-let buttonRegister = $("#button-register")
-let buttonLogin = $("#button-login")
-let outputText = $("#output-text")
+const paragraphData = $("#data")
+const currencyCode = $("#curreny-code")
+const currencyName = $("#curreny-name")
+const currencySymbol = $("#curreny-symbol")
 
-function register() {
-  let username = $("#input-username").value
-  let password = $("#input-password").value
-  printOutput(username, password)
-}
+// URL: https://restcountries.eu/rest/v2/alpha/id
+// {code: "IDR", name: "Indonesian rupiah", symbol: "Rp"}
 
-function login() {
-  let username = $("#input-username").value
-  let password = $("#input-password").value
-  printOutput(username, password)
-}
+fetch('https://restcountries.eu/rest/v2/alpha/id')
+  .then(response => response.json()).then(data => {
+    // GET CURRENCY ONLY
+    const currency = data.currencies[0]
 
-function printOutput(username, password) {
-  const usernamePassword = `${username} & ${password}`
+    // INSERT DATA INTO PARAGRAPH
+    paragraphData.html(JSON.stringify(currency))
 
-  console.log(usernamePassword);
-  alert(usernamePassword)
-  outputText.innerHTML = usernamePassword
-}
-
-// buttonRegister.addEventListener("click", register)
-// buttonLogin.addEventListener("click", login)
-
-buttonRegister.click(function() {
-  $("header").animate({
-    opacity: 0.25,
-    left: "+=50",
-    height: "toggle"
-  }, 5000, function() {
-    // Animation complete.
+    // PROPRAGATE DATA INTO INPUT BOXES
+    currencyCode.val(currency.code)
+    currencyName.val(currency.name)
+    currencySymbol.val(currency.symbol)
   });
-});
-
-buttonLogi.click(function() {
-  $("header").animate({
-    opacity: 0.25,
-    left: "+=50",
-    height: "toggle"
-  }, 5000, function() {
-    // Animation complete.
-  });
-});
-
-

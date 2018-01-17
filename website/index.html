@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Program Name</title>
-  <link rel="stylesheet" href="./jqueryui/jquery-ui.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 </head>
 
 <!-- HELLO WORLD -->
@@ -15,40 +15,21 @@
 
   <div id="demo" class="container">
 
-    <header>
-      <h1 id="title">Program Name</h1>
-    </header>
-
-    <hr>
-
-    <main class="container">
-      <p>Program Description</p>
-
-      <form id="form-authentication" action="">
-
-        <div id="form-username">
-          <label for="input-username">Username:</label>
-          <input id="input-username" name="input-username" type="text" placeholder="username">
-        </div>
-
-        <div id="form-password">
-          <label for="input-password">Password:</label>
-          <input id="input-password" name="input-password" type="password" placeholder="secret password">
-        </div>
-
-        <div id="form-buttons">
-          <input id="button-register" type="button" value="Register">
-          <input id="button-login" type="button" value="Login">
-        </div>
-
-      </form>
-
-      <aside id="output">
-        <h3>Output:</h3>
-        <p id="output-text"></p>
-      </aside>
-
-    </main>
+    <!-- {code: "IDR", name: "Indonesian rupiah", symbol: "Rp"} -->
+    <p id="data">
+      <div>
+        <label for="">code:</label>
+        <input id="curreny-code" type="text" name="" value="">
+      </div>
+      <div>
+        <label for="">name:</label>
+        <input id="curreny-name" type="text" name="" value="">
+      </div>
+      <div>
+        <label for="">symbol:</label>
+        <input id="curreny-symbol" type="text" name="" value="">
+      </div>
+    </p>
 
     <hr>
 
@@ -59,7 +40,7 @@
   </div>
 
   <script src="./jquery.min.js" charset="utf-8"></script>
-  <script src="./jqueryui/jquery-ui.min.js" charset="utf-8"></script>
+  <script src="./bootstrap/js/bootstrap.bundle.min.js" charset="utf-8"></script>
   <script src="./index.js" charset="utf-8"></script>
   <script src="./program.js" charset="utf-8"></script>
 </body>
