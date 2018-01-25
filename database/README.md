@@ -35,7 +35,7 @@
 **Athletes**
 
 | id | idn | name | gender | birthdate | age | height | weight | nationality | sports
-|------------------------------------------------------------------------------------
+|----|-----|------|--------|-----------|-----|--------|--------|-------------|-------
 | 1  | 3276012305930001 | Haidar | m | 23/5/1993 | 24 | 180 | 70 | Indonesia | Coding
 | 2  | 3215131306940004 | Dono   | m | 13/6/1994 | 23 | 168 | 55 | Indonesia | Running
 | 3  | 3301211106880003 | Albert | m | 11/6/1988 | 29 | 172 | 110 | Indonesia | Fishing
@@ -52,7 +52,7 @@
 **Sports**
 
 | id | branch | category | origin | description
-|----------------------------------------------
+|----|--------|----------|--------|------------
 | Coding | Mind | USA | Mental sport that assigning code to something for the purposes of classification or identification, mostly creating software or application
 | Running | Physical | Greece | Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot
 | Fishing | Fishing | Pacific Ocean | Getting fish from the water
