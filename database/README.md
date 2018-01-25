@@ -10,7 +10,7 @@
 
 ### Athletes
 
-- id: Number | INT
+- id: Number | INT [PRIMARY KEY][PK]
 - name: String | VARCHAR
 - gender: String | VARCHAR (m/f/o)
 - birthdate: Date | DATE (dd/mm/yyyy)
@@ -18,15 +18,22 @@
 - height: Number | INT (cm)
 - weight: Number | INT (kg)
 - nationality: String | VARCHAR
-- sports: Array of [Sport]
+- sports: Array of [Sports] [FOREIGN KEY][FK]
 
 ### Sports
 
-- id: Number | INT
+- id: Number | INT [PRIMARY KEY][PK]
 - branch: String (Archery / Boxing / Running / Cycling) | VARCHAR
 - category: String (Air / Endurance / Goal / Table / Strength) | VARCHAR
 - origin: String | VARCHAR
+- athletes: Array of [Athletes] [FOREIGN KEY][FK]
 - description: String | TEXT
+
+---
+
+### Diagram
+
+![Relation Diagram](./assets/diagram.svg)
 
 ---
 
@@ -51,20 +58,20 @@
 
 **Sports**
 
-| id | branch | category | origin | description
-|----|--------|----------|--------|------------
-| 1 | Coding | Mind | USA | Mental sport that assigning code to something for the purposes of classification or identification, mostly creating software or application
-| 2 | Running | Physical | Greece | Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot
-| 3 | Fishing | Fishing | Pacific Ocean | Getting fish from the water
-| 4 | Hiking | Endurance | United States | Long, vigorous walk, usually on trails (footpaths), in the countryside
-| 5 | Jujitsu | Martial Arts | Japan | Japanese martial art and a method of close combat for defeating an armed and armored opponent in which one uses no weapon or only a short weapon.
-| 6 | Badminton | Net | England | Racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players per side).The game developed in British India from the earlier game of battledore and shuttlecock. European play came to be dominated by Denmark but the game has became very popular in Asia, with recent competitions dominated by China
-| 7 | Football | Physical | England | Football is a family of team sports that involve, to varying degrees, kicking a ball with a foot to score a goal
-| 8 | Chess Boxing | Miscellaneous | Netherland | Chess boxing, or chessboxing, is a hybrid fighting sport (or a hybrid board game) that combines two traditional pastimes: chess, a cerebral board game, and boxing, a physical sport.
-| 9 | Carrom | Semi-Shooting | India | Carrom is a "strike-and- pocket " tabletop game 
-| 10 | Gebuk Bantal | Semi-Wrestling | Indonesia | Gebuk Bantal is a kind of fight sport on a bamboo above pool arena.
-| 11 | Running | Endurance | Europe | Running is a type of gait characterized by an aerial phase in which all feet are above the ground
-| 12 | Basketball | Goal | United States | Limited-contact sport played on a rectangular court. While most often played as a team sport with five players on each side, three-on-three, two-on-two, and one-on-one competitions are also common
+| id | branch | category | origin | athletes | description
+|----|--------|----------|--------|----------|------------
+| 1 | Coding | Mind | USA | 1 | Mental sport that assigning code to something for the purposes of classification or identification, mostly creating software or application
+| 2 | Running | Physical | 2 | Greece | Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot
+| 3 | Fishing | Fishing | Pacific Ocean | 3| Getting fish from the water
+| 4 | Hiking | Endurance | United States | 4 | Long, vigorous walk, usually on trails (footpaths), in the countryside
+| 5 | Jujitsu | Martial Arts | Japan | 5 | Japanese martial art and a method of close combat for defeating an armed and armored opponent in which one uses no weapon or only a short weapon.
+| 6 | Badminton | Net | England | 6 | Racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players per side).The game developed in British India from the earlier game of battledore and shuttlecock. European play came to be dominated by Denmark but the game has became very popular in Asia, with recent competitions dominated by China
+| 7 | Football | Physical | England | 7 | Football is a family of team sports that involve, to varying degrees, kicking a ball with a foot to score a goal
+| 8 | Chess Boxing | Miscellaneous | Netherland | 8 | Chess boxing, or chessboxing, is a hybrid fighting sport (or a hybrid board game) that combines two traditional pastimes: chess, a cerebral board game, and boxing, a physical sport.
+| 9 | Carrom | Semi-Shooting | India | 9 | Carrom is a "strike-and- pocket " tabletop game 
+| 10 | Gebuk Bantal | Semi-Wrestling | 10 | Indonesia | Gebuk Bantal is a kind of fight sport on a bamboo above pool arena.
+| 11 | Running | Endurance | Europe | 11 | Running is a type of gait characterized by an aerial phase in which all feet are above the ground
+| 12 | Basketball | Goal | United States | 12 | Limited-contact sport played on a rectangular court. While most often played as a team sport with five players on each side, three-on-three, two-on-two, and one-on-one competitions are also common
 
 --------------------------------------------------------------------------------
 
